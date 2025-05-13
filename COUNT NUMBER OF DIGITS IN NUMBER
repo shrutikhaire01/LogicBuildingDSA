@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+
+int countDigits(int number){
+    
+    int count;
+    while(number!=0){
+        number = number/10;
+        count++;
+    }
+    return count;
+}
+int main(){
+    int number;
+    cout<<"Enter a Number";
+    cin>>number;
+    
+    int ans = countDigits(number);
+    cout<<ans<<endl;
+    return 0;
+}
