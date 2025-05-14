@@ -1,0 +1,31 @@
+#include <iostream>
+#include <climits>
+using namespace std;
+
+int maxNumber(int arr[], int number){
+    int maxElemet = INT_MIN;
+    
+    for(int i=0; i<number; i++){
+        if(arr[i] > maxElemet){
+           maxElemet =  arr[i];
+        }
+   
+    }
+         return maxElemet;
+}
+
+int main(){
+    int number;
+    cout<<"Enter the number of elements you want in an array: ";
+    cin>>number;
+    
+    int arr[number];
+    cout<<"Enter Numbers in array";
+    
+    for(int i = 0; i<number ; i++){
+        cin>>arr[i];
+    }
+    
+    int ans = maxNumber(arr, number);
+    cout<<ans;
+}
