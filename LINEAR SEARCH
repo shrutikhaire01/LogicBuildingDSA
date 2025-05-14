@@ -1,0 +1,33 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int linearSearch(int arr[], int number, int target){
+    for(int i=0; i<number; i++){
+        if(arr[i]==target){
+            return i;
+        }
+    }
+    return -1;
+}
+
+int main(){
+    int number;
+    cout<<"Enter Number of elements you want in an array";
+    cin>>number;
+    
+    cout<<"Enter Number in array";
+    int arr[number];
+    for(int i=0; i<number; i++){
+        cin>>arr[i];
+    }
+    
+    int target;
+    cout<<"Enter Traget Element";
+    cin>>target;
+    
+    int ans = linearSearch(arr,number,target);
+    cout<<ans;
+    return 0;
+    
+}
