@@ -1,0 +1,39 @@
+#include <iostream>
+#include <bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int countDigits(int number){
+    int count = 0;
+    while(number!=0){
+        number = number / 10;
+        count++;
+    }
+    return count;
+}
+
+bool isAN(int number){
+    int count = countDigits(number);
+    int sum = 0;
+    int copy = number;
+    
+    while(number>0){
+        int lastDigit = number%10;
+        sum = sum + pow(lastDigit , count);
+        number = number/10;
+    }
+    if(sum == copy) return true;
+    return false;
+}
+
+int main(){
+    int number;
+    cout<<"Enter Number: ";
+    cin>>number;
+    
+    if(isAN(number)){
+        cout<<"IT IS ARMSTRONG NUMBER";
+    }else{
+        cout<<"NO";
+    }
+}
