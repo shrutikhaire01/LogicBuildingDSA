@@ -1,0 +1,30 @@
+#include <iostream>
+#include <bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+
+
+bool isPN(int number){
+int sum = 0;
+
+for(int i=1; i<number; ++i){
+    if(number%i == 0){
+        sum = sum + i;
+    }
+
+}    if(sum == number) return true;
+    return false;
+}
+
+int main(){
+    int number;
+    cout<<"Enter Number: ";
+    cin>>number;
+    
+    if(isPN(number)){
+        cout<<"IT IS Perfect NUMBER";
+    }else{
+        cout<<"NO";
+    }
+}
